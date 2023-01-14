@@ -133,6 +133,7 @@ hr {
 
 .blog-list {
     display: grid;
+    justify-content: center;
     grid-template-columns: repeat(2, 1fr);
     grid-row-gap: 26px;
     grid-column-gap: 20px;
@@ -192,6 +193,7 @@ hr {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 5px;
 }
 
 .golden {
@@ -215,6 +217,27 @@ hr {
 }
 
 
+/*  Large Screen  */
+
+@media screen and (min-width:993px) and (max-width:1200px) {
+    .blog-list {
+        grid-column-gap: 0px;
+    }
+
+    .blog-item {
+        padding: 0;
+    }
+
+    .blog-img img {
+        width: 130px;
+    }
+
+    .course-list {
+        flex-wrap: wrap;
+    }
+}
+
+
 /*  Medium Screen  */
 
 @media screen and (min-width:577px) and (max-width:992px) {
@@ -224,6 +247,10 @@ hr {
 
     .section-header {
         text-align: center;
+    }
+
+    .section-2 {
+        padding: 0
     }
 
     .player-list {
@@ -236,6 +263,7 @@ hr {
 
     .blog-item {
         flex-direction: column;
+        padding: 0;
     }
 
     .blog-detail {
@@ -243,8 +271,9 @@ hr {
     }
 
     .course-list {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        flex-wrap: wrap;
+        margin: 30px 0;  
+        padding: 0 10px;
     }
     
 }
@@ -252,6 +281,10 @@ hr {
 /*  Small Screen  */
 
 @media screen and (max-width:576px) {
+
+    .main {
+        width: 90%;
+    }
     .nav {
         flex-direction: column;
         align-items: center;
@@ -277,18 +310,23 @@ hr {
         flex-direction: column;
     }
 
+    .section-2 {
+        padding: 25px;
+    }
+
     .course-list {
         flex-direction: column;
+        flex-wrap: wrap;
     }
-
+    
+    .course-name {
+        margin-right: 0;
+    }
+    
     .ratings {
         flex-direction: column;
+        align-items: start;
     }
-
-    .course-item img, .course-name {
-        width: 170px;
-    }
-
 
 
 
